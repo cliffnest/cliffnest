@@ -1,0 +1,10 @@
+[book]
+authors = ["Hristijan Lubeski"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Cliff Nest"
+
+[output.html]
+theme = "src/theme"
+default-theme = "ayu"
