@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Key Performance Indicators - The Cliff Nest</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="cover.html"><strong aria-hidden="true">1.</strong> Cover</a></li><li class="expanded "><a href="preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li class="expanded "><a href="chapter_1.html"><strong aria-hidden="true">3.</strong> The Letter</a></li><li class="expanded "><a href="chapter_2.html"><strong aria-hidden="true">4.</strong> Chance Meeting</a></li><li class="expanded "><a href="chapter_3.html"><strong aria-hidden="true">5.</strong> Deceleration Burn</a></li><li class="expanded "><a href="chapter_4.html"><strong aria-hidden="true">6.</strong> General Alert</a></li><li class="expanded "><a href="chapter_5.html"><strong aria-hidden="true">7.</strong> The Blind Snail Message</a></li><li class="expanded "><a href="chapter_6.html" class="active"><strong aria-hidden="true">8.</strong> Key Performance Indicators</a></li><li class="expanded "><a href="chapter_7.html"><strong aria-hidden="true">9.</strong> Antimalware</a></li><li class="expanded "><a href="chapter_8.html"><strong aria-hidden="true">10.</strong> The Learners Club</a></li><li class="expanded "><a href="chapter_9.html"><strong aria-hidden="true">11.</strong> History Lesson</a></li><li class="expanded "><a href="chapter_10.html"><strong aria-hidden="true">12.</strong> Risk Assessment</a></li><li class="expanded "><a href="chapter_11.html"><strong aria-hidden="true">13.</strong> Articles of Incorporation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Dark</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Cliff Nest</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#chapter-6---key-performance-indicators" id="chapter-6---key-performance-indicators">Chapter 6 - Key Performance Indicators</a></h1>
+<p><strong>Communication Transcript:</strong> Riordan BioGenomics to Sister’s Status update</p>
+<p><strong>Message Transport:</strong> Directed multi node exchange. High bandwidth. Delegated nodes recording only.</p>
+<p><strong>Participating Nodes:</strong> delegated Node GS1-00489, Node GS2-00325, Node GS4-0012, Node GS7-7881, delegated Node GS5-5007, delegated Node GS3-0005, Einin Riordan PDA, delegated Node GS9-4200, Alberto Saga PDA.</p>
+<p><strong>Crypto mode:</strong> Encrypted-in-transit.</p>
+<p><strong>Transcript start:</strong></p>
+<p><em>Node GS2-00325:</em> Glad that all of us could find the time for this meeting. Our colleagues of the GS1, GS3, GS5 and GS9 are only in observer/record mode in order to minimize the delays caused by the distances between the outer orbits of those ships. We have agreed on topics ahead of time. A formal announcement of attendees - we have our guests from Riordan BioGenomics - Miss Einin Riordan and M-r Alberto Saga as well as the hosts of the Effort Ships - Captains Lilly Kieno of the GS1, Yosef Biram of the GS2, Aram Korwin of the GS3, Ghita Lagatta of the GS4, Marama Nishimura of the GS5, Marie Ramirez of the GS7 and Stig Lind of the GS9.</p>
+<p><em>Alberto Saga PDA:</em> Captain Biram, you can hardly call this making time. You had us take orbital flights to your ships specifically for this conference. It would be infinitely simpler if we could just connect from our offices and the argument of delays from the Hospital habitats and the Calder 1G Habitat are negligible.</p>
+<p><em>Node GS7-7881:</em> Doctor Saga, Mary of the GS7 speaking. You probably guessed this, but for the record - this is a very sensitive matter and we don’t really trust the commercial relays of Kerata-Zemke not to record and try to decrypt this session for their own interests. With you aboard the GS2 the Sisters can establish their own linkup and communicate with minimal risk of eavesdropping. We extend a special thanks to both of you for making this trip.</p>
+<p><em>Node GS4-0012:</em> Ghita Lagatta of the GS4. Ladies, gentlemen. The formalities and pleasantries are dispensed with. Onto business and keep this short, I have an orbit adjustment burn scheduled in 12 minutes. What are our success KPI numbers?</p>
+<p><em>Alberto Saga PDA:</em> Overall population has reached almost one million humans system wide. Growth in historical figures has been difficult to collate so far but with the current access to the Sister ships databanks we have a good view of where we are: Between the arrival of Wave three and Wave one the growth was really small, a total growth in population of 33,000 or 0.036%. After the consolidation of all ships the population growth percentage started to move up slightly - we saw a growth of 0.6% in the next 20 earth years and then 0.8% in the following 20 earth year period. So four EY ago we had a total population of 942,523 in the system. The past three EY were a massive success, the growth percentage reached 1.3% and the total population is now nearly 980,000.</p>
+<p><em>Node GS7-7881:</em> I think the original math was something around 1% population growth rate. I know that the entire state of play changed but we did everything possible to reconfigure the Ships into habitats and build more habitats.</p>
+<p><em>Alberto Saga PDA:</em> The original math was estimating that we would double the population in 60 EY at a conservative population growth rate at 1%. But that expectation was based on the assumption of habitable planet for colonization. Without it, we had to adjust to life in open space and the death rate of radiation, accidents, debris impacts and even oxygen and food shortage took its toll - especially in the first 20 EY after arrival. That brings me to the second KPI - Birth defects. In the first 20 EY birth defects were noticed in at least 45% of all birth, most resulting in infant death. Most defects were caused by poor nutrition of the mothers as well as high radiation levels. Birth defects have slowly been falling off in the next 40 EY to impact an average of 25% as we repositioned habitats in the radiation shade of the planetoid bulk and magnetic fields and expanding the Riordan BioGenomics work to focus on proper gene control instead of just patching up colonists. Birth defects have been significantly reduced in the last 10 quarters to a 5% impact in population. This was achieved as a combination of good gestation environment and gene splicing during early gestation. After we made the hospital care from inception and through pregnancy free of charge we have seen great improvement - the families let the baby be developed in the hospital habitat, shielded from solar wind radiation, stable gravity, proper nutrition and living conditions. But the costs of transit to the hospitals is still too large for some families and that’s where the rest of the 5% resides.</p>
+<p><em>Node GS2-00325:</em> Very good information, doctor Saga. I think that we have a much better picture of the current growth of population. Tell us whether the new generations borne here are more adapted to the external conditions?</p>
+<p><em>Alberto Saga PDA:</em> We don’t have sufficient information to extrapolate a trend. Most births are only on the second and some on the third generation. The third generation childhood illness events and issues like bone brittleness and cancers are reduced in total number. These first indicators point to a better adjustment to external conditions that but I can’t give you a population level prognosis. I can say that with the rise in population growth we will have more data points in the next 20 EY to extrapolate a trend.</p>
+<p><em>Node GS4-0012:</em> I am not too happy with this update. It’s just total numbers, without any information whether our efforts will pay off. Have you seen the costs incurred by the Sisters on this crazy venture?</p>
+<p><em>Einin Riordan PDA:</em> I will take this question captain Lagatta. Stop trying to take pot shots at Riordan BioGenomics. We are aware of your costs since we charge you. And we are in the same boat with you. Riordan BioGenomics has around 2% loss quarter on quarter in the past three EY. The agreement with the Sisters compensated for the costs of the free inception and pregnancy protection, but the good news on the population growth actually means that there are less sick people to treat and less income. Injury rate has reduced due to better mapping of asteroids, automation in factories and in mining efforts. We are still maintaining the same hospital habitat space, and there is another cost item - the one gee development of children which helps gene pool stability for the entire population is costing us an enormous amount of money. This is an effort of long term survivability of the human race, not about earning money.</p>
+<p><em>Node GS7-7881:</em> We all agree that this effort is long term and we must do everything in our power for our population not to die off. I am certain that our colleagues on the delegated GS nodes would have more notes about injuries and losses as their populations are working in the debris field. We got the required information, thank you Miss Riordan, M-r Saga. One request from the Sisters to BioGenomics: As we are all aware, your patient inflow is reduced so you will move one of the hospital habitats to parking orbit near GS1 to better support the outer orbits. Captain Kieno of the GS1 help with power supply sources and debris shielding. This will also help with the outer orbits mothers having a closer hospital habitat for gestation.</p>
+<p><em>Einin Riordan PDA:</em> We will consider this and report back. It is a non-trivial effort of relocating patients so bear with us. Thank you.</p>
+<p><em>Exchange Disconnect:</em> Node GS2-00325, Node GS4-0012, Node GS7-7881, delegated Node GS1-00489, delegated Node GS3-0005, delegated Node GS5-5007, delegated Node GS9-4200</p>
+<p><em>Einin Riordan PDA:</em> Alberto, as our benefactors gave us this high bandwidth link let’s use it - tell me about the final KPI?</p>
+<p><em>Alberto Saga PDA:</em> We are seeing 3% overall improvement of resilience to local conditions based on injury, exposure and bone density issues. Bone density is improved, radiation based diseases are on the decline. Muscle strength in long zero gee conditions is retained without measurable loss for half EY. Deep sleep periods are only tested for periods of half EY under pretext of preventive coma, and is 100% successful. I am starting to note physical changes in skin texture and vision abilities. Also hair loss is nearly complete. Einin, we are really playing gods here - we are pushing evolution far beyond its limits. People have begun to notice that their children are a bit different, but as long as they are healthy and strong everyone is happy. I can’t say what will happen by the fourth generation of adjustments.</p>
+<p><em>Einin Riordan PDA:</em> I know that this is a very unpleasant topic, but the human race must become native. There are no planets that we can call Earth here, so we need to learn to live in open space. And we need to do that fast or just go extinct. Good job on this. Keep me informed.</p>
+<p><strong>Transcript end.</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_7.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_7.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

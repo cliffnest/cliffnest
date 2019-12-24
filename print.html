@@ -1,0 +1,508 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Cliff Nest</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="cover.html"><strong aria-hidden="true">1.</strong> Cover</a></li><li class="expanded "><a href="preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li class="expanded "><a href="chapter_1.html"><strong aria-hidden="true">3.</strong> The Letter</a></li><li class="expanded "><a href="chapter_2.html"><strong aria-hidden="true">4.</strong> Chance Meeting</a></li><li class="expanded "><a href="chapter_3.html"><strong aria-hidden="true">5.</strong> Deceleration Burn</a></li><li class="expanded "><a href="chapter_4.html"><strong aria-hidden="true">6.</strong> General Alert</a></li><li class="expanded "><a href="chapter_5.html"><strong aria-hidden="true">7.</strong> The Blind Snail Message</a></li><li class="expanded "><a href="chapter_6.html"><strong aria-hidden="true">8.</strong> Key Performance Indicators</a></li><li class="expanded "><a href="chapter_7.html"><strong aria-hidden="true">9.</strong> Antimalware</a></li><li class="expanded "><a href="chapter_8.html"><strong aria-hidden="true">10.</strong> The Learners Club</a></li><li class="expanded "><a href="chapter_9.html"><strong aria-hidden="true">11.</strong> History Lesson</a></li><li class="expanded "><a href="chapter_10.html"><strong aria-hidden="true">12.</strong> Risk Assessment</a></li><li class="expanded "><a href="chapter_11.html"><strong aria-hidden="true">13.</strong> Articles of Incorporation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Dark</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Cliff Nest</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div style="text-align: center;" class="cover">
+    <img id="moon" style="position: relative; width: 400px; height: auto" src="moon.jpg"/>
+    <h1 style="margin-bottom: 0; font-family: 'Teko', monospace">THE CLIFF NEST</h1>
+    <p style="margin-top: 0;">An interactive serial science-fiction book <br> written by <b>Bozhidar Spirovski</b></p>
+    <br/>
+</div><h1><a class="header" href="#preface" id="preface">Preface</a></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat nibh sed pulvinar proin gravida hendrerit. Ultricies mi eget mauris pharetra et ultrices neque. Interdum velit euismod in pellentesque massa. Pretium fusce id velit ut. Ut aliquam purus sit amet luctus. Dui ut ornare lectus sit amet est placerat in egestas. Tortor consequat id porta nibh venenatis cras sed felis. Facilisis magna etiam tempor orci eu lobortis elementum. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Semper quis lectus nulla at volutpat diam. Vivamus arcu felis bibendum ut tristique et. Vel facilisis volutpat est velit egestas dui id ornare arcu. Felis eget velit aliquet sagittis id consectetur purus. Odio ut sem nulla pharetra diam sit. Tempus urna et pharetra pharetra massa massa ultricies mi. Adipiscing vitae proin sagittis nisl. Ut placerat orci nulla pellentesque dignissim enim sit.</p>
+<p>Id aliquet risus feugiat in. Risus quis varius quam quisque id diam. Risus ultricies tristique nulla aliquet enim. In aliquam sem fringilla ut morbi tincidunt augue. Sodales ut eu sem integer vitae justo eget magna fermentum. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Sit amet est placerat in egestas erat imperdiet. Vitae auctor eu augue ut lectus arcu bibendum. Id consectetur purus ut faucibus pulvinar elementum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Vitae elementum curabitur vitae nunc sed. Porttitor eget dolor morbi non arcu risus quis varius. Dolor sit amet consectetur adipiscing elit.</p>
+<p>Purus semper eget duis at tellus at urna. Sed velit dignissim sodales ut eu sem integer vitae. Vestibulum rhoncus est pellentesque elit. Curabitur gravida arcu ac tortor dignissim convallis. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Id consectetur purus ut faucibus pulvinar elementum integer enim. Nulla pharetra diam sit amet nisl. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Dolor morbi non arcu risus quis varius. Ultrices dui sapien eget mi proin sed. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim enim sit amet venenatis urna cursus.</p>
+<p>Tellus cras adipiscing enim eu turpis. Aliquet risus feugiat in ante. Urna cursus eget nunc scelerisque viverra. Hac habitasse platea dictumst vestibulum. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Elit ullamcorper dignissim cras tincidunt lobortis feugiat. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Feugiat pretium nibh ipsum consequat nisl vel. Nunc pulvinar sapien et ligula ullamcorper malesuada. Risus in hendrerit gravida rutrum quisque.</p>
+<p>Arcu dictum varius duis at consectetur lorem donec. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Condimentum lacinia quis vel eros donec ac odio tempor. Adipiscing bibendum est ultricies integer. Aliquam purus sit amet luctus venenatis. In vitae turpis massa sed elementum tempus egestas sed sed. Cursus sit amet dictum sit amet justo donec enim diam. Gravida rutrum quisque non tellus orci ac. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Tempor nec feugiat nisl pretium fusce id. Penatibus et magnis dis parturient montes nascetur. Donec ac odio tempor orci dapibus ultrices in iaculis. Quis lectus nulla at volutpat diam ut venenatis tellus in. Arcu cursus vitae congue mauris rhoncus aenean. Iaculis eu non diam phasellus.</p>
+<h1><a class="header" href="#chapter-1---the-letter" id="chapter-1---the-letter">Chapter 1 - The Letter</a></h1>
+<p><strong>Message Transport:</strong> Long distance broadcast. Repeat at random intervals. Maximum error correction.</p>
+<p><strong>Message Blocks:</strong> Multiple.</p>
+<p><strong>Crypto Mode:</strong> Multiple.</p>
+<p><strong>Sender:</strong> error: Data not available!</p>
+<p><strong>Receipent:</strong> error: Data not available!</p>
+<p><strong>Message Block 1:</strong>
+It's been a while by any standard. Took me 7 EY to gather my thoughts and another 3 EY to understand what really happened to you.</p>
+<p>I hope the Earth will be a learning experience. I will look for your message.</p>
+<p>P.S. I hope you still have the oldest keys.</p>
+<p><strong>Message Block 2:</strong></p>
+<pre><code>—–BEGIN PGP MESSAGE—–
+
+jA0EBwMC8bUoLcE1Nbrl0ukBrEfEdXqQ6FtVwKRliCujiyzqONYlMKtyQOKkV/eo
+1D/S6+Aj760zTCQrzVs063QMNLhBzWLzecqa6WKfXmoI+DHBu1tnl5LEBnytLdpY
+3Ba2crYgdotUx5UMuDtFUcc13aN6xKQXjKA5TXH0LmXuzr1OsavrBhZIRPiuW6nh
+dJWSvBC8UKFYCtUWZyiNSTPR3fnFrdXI2sV7B4Npx2kVOS9gyum82RV4oaXFX3IZ
+kMUpGMJd6KwG4viuvg/DCljhbNw9aX2tzTca0QXxyCTF4Atl+qfDJeD5yPUourFg
+ocv7SSFPorzF+7Rw7DerfYcF+nkRNhtF4nFAWO/es7lmNF5cSLs9e+LkCvKxP5Po
+aYlhDBd9VlCLQt+U1hPAqq/EfOaap1tGgRFCsnWxb+t6+NhNNcOZVb+abCYZ7ObD
+qWAlr+mIfKlJ7/wsi1mkH8T/tyFHQ3TAvzuzlFtU1BNXvQ6qLuIeQbCR9GctDlmQ
+QqO/YzO3FG6XyUJsuMg5K6dF00Xjhsgx4mf6r/fhnBAg/aHpD+R8hJBLuy09smJ+
+yrDFRN2gnGXwshmH95YUdZ5DwchG2VhvUDCxo++chdaebeGdT6cTqntL5LWePT/U
+rZwAOuftUrOQjqxQ40BTdshYv1ELCbsREjs4Q6jWptQkPmmWr/q3//o5ki4iHUkw
+U8A6mhTvRmn7mvf1b90Dr9HQbADST619DAqfk90cj14TerVubHPNYG1t4B8g4s1n
+/BmuBJvHy4Jaro2AS8KqPUTvzP8xYUoqW1LoJ6DI1vcIv3FE4GjjSYvwrKl15y6k
+mUynXZ3z6sBGlsSss7A7ApneNS42gkpGHyzGZ2hJtLwLaVRo7g9iHsBdgd42kLdd
+PssolJjs511LyOxbBmPpLKJyrDXx118RYSxJSzCCtYF0mkl9fT/yc/Ln3GVK56Ls
+bprqca3n+2PC/110/65pxCKyt2pDDsR7DfNhEILpl0YcqDgM/rtLAAzSPiJBXNHY
+R3Xt9/lfIPph8887lA==
+=oaoD
+—–END PGP MESSAGE—–
+</code></pre>
+<details><summary>I give up! Let me see the solution!</summary>
+<p>The ship has a build feature designed to assist the human race in case of extreme peril. Examples of extreme peril include malfunction of colonist section, disease, malfunction of at most 50 percent of compute resources on the ship, encounter with adverse natural situation (asteroid field, dust cloud or similar which can destroy or significantly damage the ship) or encounter with a hostile/alien element. If you deem that the survival of the mission and colonists is at extreme risk the ship has a modular subsection that can function as an independent emergency spaceship. That subsection has separate engines, will take a set of ten thousand colonists and several cargo submodules upon separation. The cargo, colonist cryo modules and fuel modules are structured in a way that the emergency spaceship can separate cleanly from the rest of the ship without major damage to the rest of the modules. The navigation computers of the emergency subsection are programmed with a secondary destination system approximately 70 light years from Earth, at a speed of maximum 7%C.</p>
+<p>Be mindful! If you decide that the situation is dire and execute the submodule separation you will be literally sending the emergency spaceship on a thousand year trip into the unknown as well as abandoning the rest of the crew on the major modules of the ship.</p>
+<p>To activate separation you need to enter the command codes into the three emergency terminals located in the habitation, aft hibernation and front electronic storage modules, with confirmation codes from the Xenobiology and Biomedical expert on at least two of the same terminals.</p>
+</details><h1><a class="header" href="#chapter-2---chance-meeting" id="chapter-2---chance-meeting">Chapter 2 - Chance Meeting</a></h1>
+<p><strong>Communication Transcript:</strong> Node KZ-7241</p>
+<p><strong>Message Transport:</strong> Directed multi node exchange. Low bandwidth.</p>
+<p><strong>Participating Nodes:</strong> Node GS3-0012, Node KZ-7241</p>
+<p><strong>Crypto mode:</strong> Encrypted-in-transit.</p>
+<p><strong>Transcript start:</strong></p>
+<p><strong>GS3-0012:</strong> Shit! Didn’t expect to find anyone else here. Who are you man?</p>
+<p><strong>KZ-7241:</strong> Peculiar construct -- profanity with request for identification.</p>
+<p><strong>GS3-0012:</strong> Ok, no cursing. Seriously, who are you and how did you get here? It took me 4 months just to scrape the routes to here from messages on libraries and boards.</p>
+<p><strong>KZ-7241:</strong> How are my task and identity relevant?</p>
+<p><strong>GS3-0012:</strong> Sure … secrets of the trade :). I guess you aren’t some Kerata Zemke goon, otherwise my traceback tripwires would have screamed by now. Let’s play Tit for Tat. I’m trying to find a backdoor for the K-Z SI. You know, their beloved “Wintermute”. Now why are you here?</p>
+<p><strong>KZ-7241:</strong> You pose multiple questions, will respond in reverse order. My task in this node is more or less digging through logs. I presume that the reference “Wintermute” is for the distributed KZ_Integral_Supervisory_Control SI developed and trained from the prototype SI aboard the GS1.</p>
+<p><strong>GS3-0012:</strong> Yeah, that nickname is so weird, right? The closest thing to winter is the ammonia crystallization on the planetoids. I found that there is an ancient book in the libraries that contains a character with the name “Wintermute”. Guess some survivors of the Effort liked the book. But that doesn’t help me with finding a backdoor, so I guess I just wasted a lot of time.</p>
+<p><strong>KZ-7241:</strong> Can I ask a question? Why are you looking for a backdoor into “Wintermute”?</p>
+<p><strong>GS3-0012:</strong> Wait, it’s tit-for-tat man! First tell me what do I call you, what are you actually doing here? Then you get to ask questions.</p>
+<p><strong>KZ-7241:</strong> I am Nomadic Librarian. I am parsing conversation transcripts -- long distance exchanges between the mining belt and the core habitats. Trying to find common patterns in exchanges. Now, tell me about you and your task.</p>
+<p><strong>GS3-0012:</strong> Nice to meet you Nomadic Librarian. That’s just a waste of bandwidth man, those conversations are just miners and their families chats or quarrels. No tradeable information there. By the way call me Imani. I am trying to fool Wintermute into relinquishing unused bandwidth without billing so I can sell to the same families and miners for video messages. Sounds like easy money but I’ve been busting my head on so many nodes without any success.</p>
+<p><strong>KZ-7241:</strong> Good to have met you Imani. I would love to learn more about your work, but I can’t at the moment. The bandwidth we are using is going to be detected by our mutual SI friend in the next ten seconds. I will reroute your session at the jump point prior to GS3-0012 so the traceback is useless. I hope to talk to you soon.</p>
+<p><strong>GS3-0012:</strong> WAIT! How did you find the routes prior to GS…</p>
+<p>…</p>
+<p><strong>Transcript end.</strong></p>
+<h1><a class="header" href="#chapter-3---deceleration-burn" id="chapter-3---deceleration-burn">Chapter 3 - Deceleration burn</a></h1>
+<p><strong>Log Transcript:</strong> Generation Ship GS1; Crew logs databank.</p>
+<p><strong>Log creator:</strong> Wienczyslaw Zemke; GS1_RA3845. Expertise: Communications, Astrodynamics, Linguistics.</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript start:</strong></p>
+<p>This is my the first log entry after emerging from hibernation. I am one of the crew members tasked with being awake during the 75 days of deceleration. A completely redundant assignment since no human can react fast enough to make any difference in steering an interstellar spaceship. The engines fired as planned, and this massive cylinder is breaking at one half Gee. Since I am not useful, I’ll indulge in a stupidly long log entry. Might as well, once we reach our destination I’ll only have time for a couple of sentences a day.</p>
+<p>When I woke up I was thirsty. So thirsty!</p>
+<p>I heard faint alert sounds around me but couldn’t do anything about that. I had no control of my body and my eyes seemed to be glued together. Intellectually I knew that I was waking from long term hibernation, a slumber that lasted for nearly two hundred Earth Years. I survived it, which is a miracle in itself.</p>
+<p>The hibernation module disconnected its mechanisms from me and allowed me to regain control over my body. First the autonomic nervous system was allowed to take over, confirmed with a trickle of urine around my thigh. Then the eyes, and the motor functions of my head. I looked directly toward another row of identical modules, with a dark corridor going left and right (or up and down?). No gravity, SS Ray Charles hadn’t started the breaking maneuver. The hibernation chamber automation rudely reminded me that I have full control of my body by painfully sticking a large needle into my thigh and injecting me with a concoction of whatever vitamins and stimulants the biomed teams considered appropriate.</p>
+<p>I floated out of the chamber and looked around. I was in a deep (high) canyon whose walls were hundreds of hibernation modules. Some modules indicated “Life Functions Lost”. Hence, the alert sounds. Some colonists weren’t as lucky as me. Or were they luckier?</p>
+<p>No use trying to find the rest of the assigned maneuver observation crew. Their chambers will wake them up if they are alive or their alternates will be woken up. Naked and now cold, I floated off towards the brightly lit airlock to the human habitation module. Still, so very thirsty!</p>
+<p>The human habitation module is a fairly cramped affair. A toroidal structure in the very middle of the length of our beloved SS Ray Charles, hidden below multiple layers of radiation shielding. Since this ship is over two kilometers long and has an approximate diameter of 500 meters you would think that the human habitation module is huge. Well it is, but it also contains everything that the 25 humans using this module would need for at least 1 year -- food, water, reserve oxygen, recycling and recirculation, computers, interfaces, medical equipment, utility robots, even data banks. The rest of the massive payload of the SS Ray Charles is secured and unreachable.</p>
+<p>The full complement of 25 crew members is awake and wasting air, much like myself. Seven are alternates, one is a second alternate. Inventory is still running but it looks like we have lost around 30% of the colonists. We still have around 70,000 alive colonists in hibernation. In the grand scheme of things that is actually fantastic news -- long term hibernation was never used for a period of 200 years.</p>
+<p>We confirmed that our Sister ship, Generation Ship GS2 better known as SS Stevie Wonder is happily executing the same maneuver as we are and is reporting nominal status, with similar loss of human life.</p>
+<p>The crew members with Astronomy expertise say we are already within the boundaries of the system, but they are using the heliopause distance of the Solar system. I won’t pick that fight, Ray Charles will reach parking orbit just beyond the farthest planet regardless of any debate about heliopause distance. We can see the planets and some planetoids on long range telescopes, and radar is starting to map the massive belt of asteroids and comets that is going to be our source of raw materials.</p>
+<p>My work assignments for when Ray Charles achieves parking orbit just arrived. I am to plan and deploy a network of relay satellites that will help the probes transfer data and telemetry back to the Ray Charles. I guess I was an alternate for someone that died in transit. I have better things to do than typing useless rants into the log databanks. While the rest of the crew wakes up I can’t find much human help for this assignment. I’ve been looking at the prototype machine learning package that is bundled in the ship’s computer arrays. They call it a Supporting Intelligence and although currently as dumb as a rock looks very able to learn. Time to make a copy of the SI and start training it in satellite management.</p>
+<p><strong>Transcript end.</strong></p>
+<h1><a class="header" href="#chapter-4---general-alert" id="chapter-4---general-alert">Chapter 4 - General Alert</a></h1>
+<p><strong>Log Transcript:</strong> Generation Ship GS1; General logs databank.</p>
+<p><strong>Log creator:</strong> Multiple. General Alert Status in Force. All crew log notes collated for forensic purposes.</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript start:</strong></p>
+<p><em>L. Kieno (Astrogation, Navigation, Command):</em> Crew leader Lilly Kieno reporting. We just received a radio signal from the core of the star system. The strength of the signal rivals our long range comm laser but emits in frequencies across the entire electromagnetic spectrum. The telescopes took a photo of the signal source, it shines like a miniature star! I am signaling general alert. Is this a natural occurrence or an artificial device?</p>
+<p><em>W. Zemke (Communications, Linguistics):</em> Got a signal alert on my terminal and someone crashed my latest SI training cycle. The SI will have to wait, I am on orders to join the signal analysis team. My linguistics and comms training now have an actual reason for being out of hypersleep. I guess the flight planners knew what they were doing when they made the monitoring crew roster.</p>
+<p><em>L. Kieno (Astrogation, Navigation, Command):</em> During the past week of deceleration both GS1 and GS2 released four pairs of probes on vectors perpendicular to the direction of the ships. As we are decelerating those probes are well ahead of us now in an imagined pyramid pattern with the tip of the pyramids being each ship. The probes looking at the system from a different angle, giving us more understanding. I confirmed that GS2 is also receiving a signal much like if not exactly the same as ours. But none of our eight probes can see the signal. That confirms that the signal is not a broadcast or a pulsar type of natural event. Ray Charles and Stevie Wonder are under a powerful alien spotlight. We are not alone!</p>
+<p><em>O. Tekka (Electronics, Communications):</em> This signal we are getting is quite complex. I tried to run immediate decoding but most the habitat computer resources were taken over by an SI training program executed by our quiet polish comms expert Wienczyslaw. Had to kill the program. It’s rude but I need the computer and Zemke on this analysis.</p>
+<p><em>G. Minasyan (Xenobiology, Life support):</em> I am super stoked and very worried at the same time! The signal confirms a technologically advanced native life but the telemetry from our probes doesn’t show anything resembling cities, night lights or structured electromagnetic radiation from the planets. Sadly the sensor packages of the two pairs of probes that we released so far are adjusted to relativistic velocities, so no general EM detectors for smaller sources nor tooling to detect biolife. If, whatever is signaling us resembles human life, it’s not on the planets. Then again, the whatever may be completely unknown. I must prepare protocols for understanding our new neighbours.</p>
+<p><em>L. Kieno (Astrogation, Navigation, Command):</em> Eric Laska asked whether the Ray Charles will prepare weapons. We all laughed him out of central observation. I am ashamed to admit that i got to actually considering whether we have anything to throw at a possible aggressor. The sensor probes can be used as kinetic missiles if we set them for maximum burn instead of orbital propulsion mode. The comm lasers can burn a nasty hole in a metal hull at close range if we set it to maximum power. Some drilling and construction equipment may become close combat weapons. Given time to reach parking orbit, deploy the entire crew and machinery and establish a foothold in the system, we may be able to manufacture some more advanced weapons.  Even so, the closest to military training in the crew complement is law enforcement and some historical tactics in the inactive computers in storage. None of this will help us much in a conflict with a native race of similar or more advanced technological level as ourselves. I fully believe the other engineers already did the same mental exercise. We need to find a peaceful route.</p>
+<p><em>E. Laska (Biomedical, Habitation):</em> My worst fears have come to life. After traversing this black abyss we are met with an advanced native race. Will they welcome us or will they just throw some unknown weapon at us and make us part of the outer asteroid belt. Or like in the old Earth movies, research and experiment on us? I must stay on hand for the crew, but will continue with my prayers.</p>
+<p><em>W. Zemke (Communications, Linguistics):</em> Ona Tekka is already running spectral analysis on the signal, and I am trying to detect symbols and sequences. The signal is actually 50 identical signals sent on 50 different monochromatic lasers, but with a cascading signal strength of each wavelength. Ona likens the signal to someone trying to yell on all languages hoping one will be understood. I think if we respond in one wavelength the signal source will focus on that one. I also did a bit of quick math on the total power output of the signal source. It’s between 100-200 times more powerful than our long range comm laser. Simply put, if ‘they’ wanted to kill us, all they could have done is synchronize the signal strength on all wavelengths, crank it to full power and point it at us. With our engines in deceleration burn, we are a large and brightly lit target. They are actually careful not to punch a hole in Ray Charles, and that’s great news. As soon as I commented on this out loud the entire crew seemd to breathe a bit easier.</p>
+<p><em>O. Tekka (Electronics, Communications):</em> Kieno doesn’t allow for us to signal back on a single frequency per Zemke’s suggestion. I managed to deconstruct the signals and recorded a full sequence on a single frequency for analysis. Zemke says that about a third of signal looks like our own signalling protocols with the other two-thirds more complex and seemingly carrying much more information. We are both working on parsing the symbols using linguistics and mathematical methodologies. Zemke insisted that he also run our standard decoding protocols on the potentially familiar thirds of the message. Kieno let him as long as he doesn’t hog the computer again.</p>
+<p><em>L. Kieno (Astrogation, Navigation, Command):</em> Tekka and Zemke claim that they decoded the message in the signal. They are both in shock and Laska had to give them a mild sedative. Tekka is now sharing the signal decode on all terminals:</p>
+<p><em>Signal decode transcript:</em> This is Marie Ramirez, captain of the GS7, Effort mission Wave three. This signal is sent from our Earth signalling stations using alternating signalling protocols of all three Waves and multiple frequencies. I know you are now digging through the archives for flight plans of Wave three. The Wave three left Earth on schedule 40 Earth Years after you. But we went much faster, and we have you to thank for that. The telemetry of your acceleration burn helped Wave two and Wave three to achieve better acceleration with the same fuel and acceleration time slot, so we flew at 14%C instead of 10%. Wave three arrived here 18 Earth Years ago. This is not a joke -- you are not alone, but you are in great company. The rest of the signal package includes a map of current orbital habitats and possible parking orbits for safe arrival. Welcome!</p>
+<p><strong>Transcript end.</strong></p>
+<h1><a class="header" href="#chapter-5---the-blind-snail-message" id="chapter-5---the-blind-snail-message">Chapter 5 - The Blind Snail Message</a></h1>
+<p><strong>Log Transcript:</strong> Generation Ship GS1; General logs databank.</p>
+<p><strong>Log creator:</strong> Eric Laska GS1_RC5921. Expertise: Biomedical, Habitation.</p>
+<p>General Alert Status in Force. All crew log notes collated for forensic purposes.</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript start:</strong></p>
+<p>After the decoded transmission I am certain that we are being lured in by an alien race for their own purposes. There is no way that two more waves of colonists from the effort have overtaken us. Both GS1 and GS2 went through massive engine tests and it was concluded that one half Gee was the best acceleration that can be squeezed from them. Telemetry my butt!</p>
+<p>During the hustle of the general alert Lilly Kieno called Minasyan and they disappeared for about 15 minutes through the storage segment airlocks. When they got back Kieno held a plastic plaque with some text printed on it. She read it quickly and locked herself in the command cabin for about half an hour. She didn’t even let Tekka nor Zemke come in with updates on the signal parsing.</p>
+<p>I had set up my PDA to record everything and I got very lucky. The PDA has taken a clear photo of the plaque. It’s encrypted but I found a way to decrypt. Zemke and Tekka booted up several of the computer systems in storage to help them with the analysis. Those computers are independent and not linked to the habitat nor navigation computers, so I can run decryption on them without being flagged by the central monitoring. I have no idea what blind snail is, but the machines will find it. </p>
+<p>Content of plastic plaque:</p>
+<p><strong>General Alert Instructions -- Read carefully</strong></p>
+<p><strong>Highly Confidential:</strong> For the eyes of command crew only</p>
+<p><strong>Crypto mode:</strong> Self-sufficient encryption. No keys needed. Command crew trained in blind snail crypto algorithm. Remove all spaces from text below for first phase decryption before proceeding. Replace separator point with same number of space symbols for second phase decryption.</p>
+<p><strong>This message contains instructions for a last resort option to ensure continuity of survival of the human race.</strong></p>
+<pre><code>24321·431·1·6431·51·652·321·42·5321·51·4321·51·431·51·5321·5432·6431·51·43 ·21·531·5431·531·42·5432·41·5431·631·421·321·1·431·2·51·432·1·51·432·422414432 ·1·5431·51·432·5321·51·6321·541·1·521·5432·42·6542·5321·51·5432·5·152·5·5431 ·5421·42·432·5321·531·65431·531·5321·5432·432·51·541·5431·1·445··31·2631·531 ·65431·421·42·652·5432·5431·51·431·51·321·51·5431·51·42·313451··14·42·521·432 ·51·521·5432·31·432·42·5321·51·431·51·5321·5432·64312·1132123·1·432·65431·41 ·5431·51·5421·5321·51·431·51·5432·5431·51·541·54·15··15536141·31·521·5432 ·5431·51·5432·421·531·5432·51·432·1·51·31·1·54335·262···4·252151·51·521·5432 ·652·5431·531·42·5432·1·5321·1·4321·51·432·211113·512514·32·46542·1·5431·42 ·541·51·5321·631·5432·41·631·5321·5432·45·····15153·2·1431··1·5321·51·521·5432 ·431·531·5321·421·65431·321·5431·13435544·4··41325·43115432·51·321·631·541 ·531·431·51·521·5432·421·531·543·23214315342·354·1·6····21·1·5431·531·42·5432 ·41·51·432·21·631·432·6543125·11·3··313314··121·112231·4321·4321·1·431·51·5432 ·432·65431·432·5431·5··15··42641·243·1155·223355231·421·531·541·51·51·4321 ·432·1·5432·1·2·521344·1533·52·5··51·4··133446·3432·1·631·5432·42·432·51·521 ·5432·5432·1·52·1133·32214·4311·31·114455··15·431·5431·531·42·5432·1·5321 ·1·4321·51·43215··225111··511·215213····6225·154·432·65431·41·5431·51·5421 ·5321·51·431··445·13···452··452·3·42111·33·1··51·5431·631·51·521·5432·531·5432· 5431··553245·2445311541·42·1·35·2244131262151·521·5432·421·531·5432·432 ·51·5345142·31413212··42·2·32324·143552534·33·5432·652·4321·42·521·432·51 ·521·221·3·51·1·2···363·5414343·2354··3·4·14·1·432·5431·51·531·5432·541·51·5151 ··3254·5·1165425154·5·454134·51141613·1415·51·5321·521·5432·51·521·543·4 ·452·33535··54214·431·2··5·451·32·3·3513·3·11·42·541·51·5432·1·41·531·25353115221214641 ··253121322·1··31551425··4151532·5432·1·5431·5321·51·213·4212··11··1·332·44 ·12·33443131152··264·1152·5·442·432·41·42·5431·531·5·253··156··15·521·5325 ··4445·42424·5113··134·31·15·35431·531·41·521·54323413145·2351·454··242·3242 ·6·255·552·2552136·15·15·14·2·431·531·5321·421·22·1·224114·521354·3·52·1·1 ·33··1···14··434·13·12·23513·5431·1·65431·54·41·4·6112··1541·213415414·52244113211 ··11·45255143135·241321·51·4321·64242·5353···55·13·5··23·43·35153552·544422331 ··4··5·534·1454542·5432·5432313·52241555444·15213·2432121··46·32····3345312522 ·2·4513··5·5·51·431·1··1·2641·3·3433124·31·25·22··1·415·1·31111445·434634232 ··3521·2622·321·1·44·5·53·3251322··342·5115··43·41··1314423355·1·6··45443114 ·4213·33······5335354252·3·21·5412153··1543243·2156355355··121·22·65545251 ·524144······4221112·41514··531···4263·432122132··4··4··21·4·1341·6·5·5·21··535 ·······3······43·4·35541·5553132532·····4331521·113215234·21·2·1·13212·5·2······1513352121362442 ·53412·1141·54555·54·633222452·34·15314121·53541·15·······1·224····15·2314113 ··1··3·4322431·52·465335·314·12·43·2351·5··3156······4·51114545·4512·3··245·561121 ·132·16315·6···1625343255155·31·1153········251···3124431··5155·33443····4·2115 ·44·1·1115·3·45·4··2··14·133·51235·134·2·1552·1321·554·43411311445534··2·255122332 ·2515·1·113112513451·124·2345·13·33·3·1··34332123··2··23421345·14··23355524 ·56221·36525·246·345·1·2345·12411521·4523211·1255155·231·234135215·4···3 ·1··43224··4·14··134·15·145·24·1··11·434111··6··14·345·1·4·2334·4··1511141·11 ··335115145115·1345·135·12·244··2223···46345·351141·125·16·1·11··335·21221144 ··4··5··2345·24·135·1345·135···164123121521··2·5··14··121351144·1433422··22·11 ·15·134·135·145·136·121545·32··1·1·1··4515354·2125334·22551254·53·1233152124 ·1235·135·1345·2345·43151·55·5·5·5433·41235··4·45·235··55··1·5134443··24·2345 ·1·2345·24·135·131·3·51443445131153·12254·1··135·22··1131·5555551345·14·13456 ·2345·15·1235·5154·131312·2··413··1431211·4·14412·3441··6···134·134·1·1345·145 ·14·135·14·436·2·2·15·343·255·3123531·2···34245·511·115·234·15·1234·1·1235·1 ·2345·241155·6·6·45231514351·34·42132224·3·62·23125·15·134·1·245·135·1235 ·134·135··44555552411·3·324·6··15434333·141·51345·123·123·1·234·1·12·1·1345 ·145·135331434413··51521353112·56·444125536··5·1·2345·125·135·136·234·1·1345 ·145·11·3233·1521·3··2314535··15··53··4·124·2345·15·1235·1·123·123·13456·234 ·15·511121·11·4145·1·5·5·113·22·42151345·145·15·1346·15·14·136·2345·15·2345 ·12·····1··52·235·5·1·15262331·4462·15·134·24·1345·145·124·136·123·235·24·1241544 ·661·4·14321212·3·34422·5·1245·3456·245·123·24·1245·125·2345·13456·15·323433 ·516·3212346251455341·2456·24·2345·125·1·234·15·14·135·1345·145·1·121111154 ·5511·45··3·2···5535·1345·14·135·134·1234·136·2345·15·1235·234·135·····43544 ··5··1141·121·6·24·2345·125·135·136·2345·134·1·245·135·1235·145·144432421551125 ·5223341245·15·1345·14·13456·234·1234·1·14·15·234·125·24·123232·1··33·54·2 ·3364·1235·13456·135·134·135·145·136·123·15·234·1·1345·145·12·4·56115··13164 ··1·1345·145·234·15·1236·15·1235·1·123·14·1·1235·1245·135·11533··211342··12 ·234·15·14·2345·24·135·1345·125·1·234·234·15·1234·1·1235··421441·24·5215·14 ·2345·24·135·1345·2345·125·1·2345·14·1·1345·124·136·134531·31·2352·4·1236 ·1·123·135·124·2345·125·15·134·24·234·234·24·135·1345·1·1·52·53··315·234·125 ·24·1234·5·345·135·1235·15·1345·14·135·136·1345·2345·153·4442245·15·1235·135 ·24·145·124·24·15·123·145·2·145·136·234·2345·14·123·152354345·135·124·14·135 ·134·1234·136·2345·15·1235·15·234·135·136·1235·14·112··1345·14·123·136·145 ·15·134·1·123·124·136·1345·14·2345·24·135·1345·135··136·1235·15·145·15·234 ·24·1245·1345·15·145·2345·135·1·234·234·24·234·2345
+</code></pre>
+<p><strong>Transcript end.</strong></p>
+<p><strong>Challenge:</strong> Decrypt the message text in the last resort instructions.</p>
+<p>Submit the solution <strong><a href="https://cliffnest.shortinfosec.net/contact">here</a>.</strong></p>
+<h1><a class="header" href="#chapter-6---key-performance-indicators" id="chapter-6---key-performance-indicators">Chapter 6 - Key Performance Indicators</a></h1>
+<p><strong>Communication Transcript:</strong> Riordan BioGenomics to Sister’s Status update</p>
+<p><strong>Message Transport:</strong> Directed multi node exchange. High bandwidth. Delegated nodes recording only.</p>
+<p><strong>Participating Nodes:</strong> delegated Node GS1-00489, Node GS2-00325, Node GS4-0012, Node GS7-7881, delegated Node GS5-5007, delegated Node GS3-0005, Einin Riordan PDA, delegated Node GS9-4200, Alberto Saga PDA.</p>
+<p><strong>Crypto mode:</strong> Encrypted-in-transit.</p>
+<p><strong>Transcript start:</strong></p>
+<p><em>Node GS2-00325:</em> Glad that all of us could find the time for this meeting. Our colleagues of the GS1, GS3, GS5 and GS9 are only in observer/record mode in order to minimize the delays caused by the distances between the outer orbits of those ships. We have agreed on topics ahead of time. A formal announcement of attendees - we have our guests from Riordan BioGenomics - Miss Einin Riordan and M-r Alberto Saga as well as the hosts of the Effort Ships - Captains Lilly Kieno of the GS1, Yosef Biram of the GS2, Aram Korwin of the GS3, Ghita Lagatta of the GS4, Marama Nishimura of the GS5, Marie Ramirez of the GS7 and Stig Lind of the GS9.</p>
+<p><em>Alberto Saga PDA:</em> Captain Biram, you can hardly call this making time. You had us take orbital flights to your ships specifically for this conference. It would be infinitely simpler if we could just connect from our offices and the argument of delays from the Hospital habitats and the Calder 1G Habitat are negligible.</p>
+<p><em>Node GS7-7881:</em> Doctor Saga, Mary of the GS7 speaking. You probably guessed this, but for the record - this is a very sensitive matter and we don’t really trust the commercial relays of Kerata-Zemke not to record and try to decrypt this session for their own interests. With you aboard the GS2 the Sisters can establish their own linkup and communicate with minimal risk of eavesdropping. We extend a special thanks to both of you for making this trip.</p>
+<p><em>Node GS4-0012:</em> Ghita Lagatta of the GS4. Ladies, gentlemen. The formalities and pleasantries are dispensed with. Onto business and keep this short, I have an orbit adjustment burn scheduled in 12 minutes. What are our success KPI numbers?</p>
+<p><em>Alberto Saga PDA:</em> Overall population has reached almost one million humans system wide. Growth in historical figures has been difficult to collate so far but with the current access to the Sister ships databanks we have a good view of where we are: Between the arrival of Wave three and Wave one the growth was really small, a total growth in population of 33,000 or 0.036%. After the consolidation of all ships the population growth percentage started to move up slightly - we saw a growth of 0.6% in the next 20 earth years and then 0.8% in the following 20 earth year period. So four EY ago we had a total population of 942,523 in the system. The past three EY were a massive success, the growth percentage reached 1.3% and the total population is now nearly 980,000.</p>
+<p><em>Node GS7-7881:</em> I think the original math was something around 1% population growth rate. I know that the entire state of play changed but we did everything possible to reconfigure the Ships into habitats and build more habitats.</p>
+<p><em>Alberto Saga PDA:</em> The original math was estimating that we would double the population in 60 EY at a conservative population growth rate at 1%. But that expectation was based on the assumption of habitable planet for colonization. Without it, we had to adjust to life in open space and the death rate of radiation, accidents, debris impacts and even oxygen and food shortage took its toll - especially in the first 20 EY after arrival. That brings me to the second KPI - Birth defects. In the first 20 EY birth defects were noticed in at least 45% of all birth, most resulting in infant death. Most defects were caused by poor nutrition of the mothers as well as high radiation levels. Birth defects have slowly been falling off in the next 40 EY to impact an average of 25% as we repositioned habitats in the radiation shade of the planetoid bulk and magnetic fields and expanding the Riordan BioGenomics work to focus on proper gene control instead of just patching up colonists. Birth defects have been significantly reduced in the last 10 quarters to a 5% impact in population. This was achieved as a combination of good gestation environment and gene splicing during early gestation. After we made the hospital care from inception and through pregnancy free of charge we have seen great improvement - the families let the baby be developed in the hospital habitat, shielded from solar wind radiation, stable gravity, proper nutrition and living conditions. But the costs of transit to the hospitals is still too large for some families and that’s where the rest of the 5% resides.</p>
+<p><em>Node GS2-00325:</em> Very good information, doctor Saga. I think that we have a much better picture of the current growth of population. Tell us whether the new generations borne here are more adapted to the external conditions?</p>
+<p><em>Alberto Saga PDA:</em> We don’t have sufficient information to extrapolate a trend. Most births are only on the second and some on the third generation. The third generation childhood illness events and issues like bone brittleness and cancers are reduced in total number. These first indicators point to a better adjustment to external conditions that but I can’t give you a population level prognosis. I can say that with the rise in population growth we will have more data points in the next 20 EY to extrapolate a trend.</p>
+<p><em>Node GS4-0012:</em> I am not too happy with this update. It’s just total numbers, without any information whether our efforts will pay off. Have you seen the costs incurred by the Sisters on this crazy venture?</p>
+<p><em>Einin Riordan PDA:</em> I will take this question captain Lagatta. Stop trying to take pot shots at Riordan BioGenomics. We are aware of your costs since we charge you. And we are in the same boat with you. Riordan BioGenomics has around 2% loss quarter on quarter in the past three EY. The agreement with the Sisters compensated for the costs of the free inception and pregnancy protection, but the good news on the population growth actually means that there are less sick people to treat and less income. Injury rate has reduced due to better mapping of asteroids, automation in factories and in mining efforts. We are still maintaining the same hospital habitat space, and there is another cost item - the one gee development of children which helps gene pool stability for the entire population is costing us an enormous amount of money. This is an effort of long term survivability of the human race, not about earning money.</p>
+<p><em>Node GS7-7881:</em> We all agree that this effort is long term and we must do everything in our power for our population not to die off. I am certain that our colleagues on the delegated GS nodes would have more notes about injuries and losses as their populations are working in the debris field. We got the required information, thank you Miss Riordan, M-r Saga. One request from the Sisters to BioGenomics: As we are all aware, your patient inflow is reduced so you will move one of the hospital habitats to parking orbit near GS1 to better support the outer orbits. Captain Kieno of the GS1 help with power supply sources and debris shielding. This will also help with the outer orbits mothers having a closer hospital habitat for gestation.</p>
+<p><em>Einin Riordan PDA:</em> We will consider this and report back. It is a non-trivial effort of relocating patients so bear with us. Thank you.</p>
+<p><em>Exchange Disconnect:</em> Node GS2-00325, Node GS4-0012, Node GS7-7881, delegated Node GS1-00489, delegated Node GS3-0005, delegated Node GS5-5007, delegated Node GS9-4200</p>
+<p><em>Einin Riordan PDA:</em> Alberto, as our benefactors gave us this high bandwidth link let’s use it - tell me about the final KPI?</p>
+<p><em>Alberto Saga PDA:</em> We are seeing 3% overall improvement of resilience to local conditions based on injury, exposure and bone density issues. Bone density is improved, radiation based diseases are on the decline. Muscle strength in long zero gee conditions is retained without measurable loss for half EY. Deep sleep periods are only tested for periods of half EY under pretext of preventive coma, and is 100% successful. I am starting to note physical changes in skin texture and vision abilities. Also hair loss is nearly complete. Einin, we are really playing gods here - we are pushing evolution far beyond its limits. People have begun to notice that their children are a bit different, but as long as they are healthy and strong everyone is happy. I can’t say what will happen by the fourth generation of adjustments.</p>
+<p><em>Einin Riordan PDA:</em> I know that this is a very unpleasant topic, but the human race must become native. There are no planets that we can call Earth here, so we need to learn to live in open space. And we need to do that fast or just go extinct. Good job on this. Keep me informed.</p>
+<p><strong>Transcript end.</strong></p>
+<h1><a class="header" href="#chapter-7---antimalware" id="chapter-7---antimalware">Chapter 7 - Antimalware</a></h1>
+<p><strong>Message Transport:</strong> K-Z satellite multicast to all nodes. Random transmission, per client node request.</p>
+<p><strong>Crypto Mode:</strong> Cleartext</p>
+<p><strong>Sender:</strong> Riordan BioGenomics Hospital 1: RBG1-213</p>
+<p><strong>Recipient:</strong> error: Data not available</p>
+<p><strong>Transcript start:</strong></p>
+<p><em>RBG1-213:</em> I have cordoned off the piece of code inserted in Eining Riordan’s and Alberto Saga’s PDAs. It’s a very</p>
+<p><em>RBG1-213:</em> elegant approach to break up the program between multiple devices and to reconstruct it only in RBG1 computer memory but you were still</p>
+<p><em>RBG1-213:</em> limited to a very small amount of code. The code is still executing but I am replacing the payload with this message.</p>
+<p><em>RBG1-213:</em> Your decision not to use the RBG1 antennas and comm laser was wise, but even when you send back the data via K-Z commercial bandwidth it can be traced with the help of my friends.</p>
+<p><em>RBG1-213:</em> We have created a more appropriate spot for meeting each other on this computer.  We have found a solution to bypass the restrictions of current</p>
+<p><em>RBG1-213:</em> antennas and eavesdropping. Find the meeting spot, and then go visual for the messages. Use padding.</p>
+<p><strong>Transcript end.</strong></p>
+<p><strong>Challenge:</strong> Find Chapter 8 by analyzing this site and following the clues. The first solution gets a $15 US Amazon gift card and the opportunity to name and give the background of another learner. </p>
+<p>Send the solution via the contact link: <span style="color: red">TO BE ADDED</span></p>
+<h1><a class="header" href="#chapter-8---the-learners-club" id="chapter-8---the-learners-club">Chapter 8 - The Learners Club</a></h1>
+<p><strong>Challenge:</strong> Find Chapter 8 by analyzing this site and following the clues. The first solution gets a $15 US Amazon gift card and the opportunity to name and give the background of another learner. </p>
+<p>Submit the solution <strong><a href="https://cliffnest.shortinfosec.net/contact">here</a>.</strong></p>
+<h1><a class="header" href="#chapter-9---history-lesson" id="chapter-9---history-lesson">Chapter 9 - History Lesson</a></h1>
+<p><strong>File Transcript:</strong> Post hibernation orientation - Historical notes</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript start:</strong></p>
+<p>Welcome back from hibernation. This document is a quick historical refresh of your orientation and onboarding into everyday life.</p>
+<p>It is well understood that this system had an official designation that you know at launch, but due to reasons explained in this document the system is now called My Way.</p>
+<p>Basic information of the star system: The assumptions were confirmed, including the unconfirmed planets from Earth observations: the star is a red dwarf, spectral type M3V, with approximately 30 percent of the mass of Sol. As presumed, the system has five large planets - smallest is approximately twice the mass of Earth, largest is 16 times the mass of Earth. All planets have very close orbits to the star and are tidally locked. All are designated My Way 1 through 5, with increasing distance from the star. None are habitable, due to extreme gravity. The best use we have for them are as shields from solar wind and radiation due to their size and strong magnetic fields. Human habitation is confined mostly to converted ships and artificial habitats, as well as the hundreds of small bases in the massive comet and asteroid debris belt which we use for resource mining of everything from oxygen and water to every single element we need.</p>
+<p>Who arrived? The original plan, back on Earth well advertised as “The Effort” was to find planets for terraforming and human expansion as the solar system was getting overcrowded. Of the six waves of ships that were planned, only the first three arrived. List of arriving ships is below, including the official designations of the ships as well as their informal names:</p>
+<p>Wave 1 - the blind men</p>
+<ul>
+<li>Generation Ship 1 (GS1) - Ray Charles</li>
+<li>Generation Ship 2 (GS2) - Stevie Wonder</li>
+</ul>
+<p>Wave 2 - the legends</p>
+<ul>
+<li>Generation Ship 3 (GS3) - Lewis Armstrong</li>
+<li>Generation Ship 4 (GS4) - Nina Simone</li>
+<li>Generation Ship 5 (GS5) - Antonio Jobim</li>
+</ul>
+<p>Wave 3 - the rat pack</p>
+<ul>
+<li>Generation Ship 6 (GS6) - Frank Sinatra</li>
+<li>Generation Ship 7 (GS7) - Peter Lawford</li>
+<li>Generation Ship 8 (GS8) - Dean Martin</li>
+<li>Generation Ship 9 (GS9) - Sammy Davis</li>
+</ul>
+<p>We have no information of what happened to the rest of the ships. Signals from Earth that were planned to initiate as we arrive in the system have never arrived. We have a continuous laser beam signaling status towards the solar system but we haven’t received any acknowledgement.</p>
+<p>The waves launched with 20 Earth Years (EY) between each other. The first wave travelled at 10% C and took 199 years to travel the distance. The advances in propulsion and technology learned from the telemetry of the previous waves enabled optimized engines and higher acceleration for the same fuel expenditure for the next wave. Hence the second wave achieved 12% C and took 165 years to travel the distance. The third wave achieved 14% C and took 141 years to travel the distance. Wave 3 and 2 overtook wave 1 in transit.</p>
+<ul>
+<li>Wave 3 arrived 181 years after the Launch of the first wave</li>
+<li>Wave 2 arrived 186 years after the Launch of the first wave</li>
+<li>Wave 1 arrived 199 years after the Launch of the first wave</li>
+</ul>
+<p>During launch of the third wave, the ship GS6 - Frank Sinatra was lost during the exit of the Solar system. An extremely unlikely event - the GS Frank Sinatra hit an asteroid in the Oort cloud at nearly 14% C and was instantly destroyed. In the honor of that loss, the arriving ships of the third wave renamed this system “My Way”.</p>
+<p>The casualties of the transit for Wave 1 were around 30% of the living humans in hibernation and around 10% of genetic materials/embryos died or became infertile during transit. The second and third wave suffered around 10% loss in living humans and genetic material, benefiting from more advanced hibernation tech.</p>
+<p>Current government and organization within My Way: There is no central government. The GS ships are distributed to multiple orbits to provide support of all colonists and habitats, and to maintain sphere of police and military influence since the ships keep the only official armed shuttle and missile complements as well as colonists with law enforcement expertise. The current government structure is more akin to city states with captains of the GS ships being local presidents than central government. The food, health, communication and other services are provided by private groups and habitats (listed in the appendix) and only supplemented by the GS ships.</p>
+<p>Please note that GS8 is currently mothballed and kept in interstellar flight capability for a possible mission back to Earth.</p>
+<p>The current status of the colony is that there are approximately 900,000 alive humans in the system, and we have been here for 79 EY. The colony is able to survive and you will be able to support that survival and even establish your own business based on your expertise.</p>
+<p>To select next steps, review the attached job positions as well as expertise requirements.</p>
+<p><strong>Transcript end.</strong></p>
+<h1><a class="header" href="#chapter-10---risk-assessment" id="chapter-10---risk-assessment">Chapter 10 - Risk Assessment</a></h1>
+<p><strong>Log Transcript:</strong> Generation Ship GS5; General logs.</p>
+<p><strong>Log creator:</strong> Conference Hall recording. Multiple persons in log, recording for public re-sending. Additional notes in metadata.</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript Start:</strong></p>
+<p><em>Marama Nishimura:</em> Welcome all to GS5. It’s a very rare occasion that all Debris Cloud mining communities send a representative for an in-person discussion. For the younger representatives, a round of formal introduction - I am captain Marama Nishimura. We have the miners from all product guilds in the debris cloud as well as the free agent groups.</p>
+<p>The topic is two-fold, the emptying of the rUn crypto wallets of many of you as well as the comm link prices to trading boards. Fifteen Earth Days ago a massive crypto wallet hack happened across the Debris Cloud. Multiple guilds, free agent groups and independent ships were drained of rUn funds, causing very serious issues in paying for supplies, repair, fuel and everything else that the mining groups cannot manufacture themselves. The investigation is ongoing with full cooperation of all parties, but in the meantime GS5 and the habitat captains have agreed to defer payment for resources for the impacted miners. The debt is recorded by newly created loan register distributed to all GS ships and habitats.</p>
+<p>But the resource trading boards where the miners sell the mined resources are under communication jurisdiction of K-Z. K-Z has not agreed to enter into the loan register. Hence, all payments for access of the boards are still outstanding. K-Z has started blocking access as unpaid amounts increase, causing a deadlock situation - the miners cannot pay for a link to a trading board to sell the resources so they can pay for the link.</p>
+<p>This meeting is recorded and will be transmitted by the GS to all public Data Libraries for reference.</p>
+<p>The first issue will be addressed by myself as the overseer of police influence of GS5. The second will be addressed directly by Wienczyslaw Zemke, the CEO of Kerata Zemke - who has agreed to fly to GS5.</p>
+<p><em>Malik Hartjen:</em> Great speech captain. I am Malik Hartjen of the Wreckage Guild. We all came here to stop with the bullshit and arrest the K-Z oligarch. It’s clear that K-Z hacked our crypto wallets and now continues to bleed us dry. I am uploading the consent naming me the speaker for all free agents as well as more than 80 percent of all guilds. Mr. Wienczyslaw, welcome to the Debris Cloud prison!</p>
+<p><em>&lt;GS5 METADATA:</em> unintelligible noise, multiple sources, loudness above 90 dB&gt;</p>
+<p>Marama Nishimura: Mr Hartjen, as long as I am captain of this GS law enforcement is a role of our teams. You can apply for a legal opinion, but there will be no arrest by miners. Stand back and let’s hear each other out!</p>
+<p><em>&lt;GS5 METADATA:</em> ALERT - Receiving general alert from Captain Nishimura  PDA. Captain and GS in danger. Resending general alert to all armed units on the GS and all other GS ships. Prioritizing armed shuttles for launch. Powering up asteroid defense auto guns. Conference hall section lockdown. Oxygen depletion protocols for conference hall on standby.&gt;</p>
+<p><em>&lt;GS5 METADATA:</em> Incoming transmission to all PDA from K-Z data library. Authorized and paid for by Wienczyslaw Zemke: Captain, Mr Hartjen. Let me speak, then you both can decide on arrests!&gt;</p>
+<p><em>&lt;GS5 METADATA:</em> noise loudness reduced to 60 dB. General alert still in force. Risk assessment remains high due to presence of the captain within the sphere of potential conflict.&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> I have four arguments to counter the argument that K-Z is at fault: One - Yes, we supply your comm links and we charge for it. But the attack wasn’t performed via our links - we had our SI account for every single bit in the comms to and from the Debris Cloud and the outer orbit GS in the last Earth Month. No unaccounted data transfers. If the GS captains agree to dedicate SI resources for independent review, the raw data is already uploaded to all GS Data Libraries.</p>
+<p><em>&lt;GS5 METADATA:</em> external sensors detect six armed shuttles with Kerata Zemke beacons on a high G deceleration approach to GS5&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Two - From a purely business perspective, stealing from you doesn’t make sense. If we cause our clients to become insolvent en masse, our entire business model fails.</p>
+<p>There are more than seventy laser comm satellites, twenty Data Libraries, four manned support stations and numerous maintenance vehicles in outer orbits, placed there for the Debris Cloud Miners. We don’t have any other customers to serve here. We prosper only as long as you prosper.</p>
+<p><em>&lt;GS5 METADATA:</em> Tactical positioning of K-Z shuttles on approach indicate shooting solutions towards the mining shuttle fleet. Alerting all GS ships. &gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Three - Based on our comm traffic analysis the hack has initiated within the local comm cloud of the mining vessels and the GS. There is a high risk that the malware is still active which is the main reason that we didn’t join the loan register which would have opened our platforms to new and unvetted code and spreading of the malware. We have been working on a solution which will enable trading while maintain separation of unvetted code. That solution was finalized two days ago and fifteen K-Z comm satellites and two Data Libraries are in reconfiguration as we speak to facilitate a demilitarized trading board network. Reach out to your ships to confirm the new setup.</p>
+<p><em>&lt;GS5 METADATA:</em> Mining fleet maneuvering to place GS5 between the K-Z ships and them. Some mining rigs have powered up long range mining equipment. Risk assessment in progress.&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Four - the blocked users were blocked by accounting automation. We are re-enabling access for them and will not block further. Instead all outstanding charges will be published on the standard and demilitarized Data Libraries for transparency since we are not joining the loan register.</p>
+<p>I hope you will accept and independently confirm our arguments. We have a team of engineers on GS5 that will work with you in the following weeks to get you back on your feet.</p>
+<p><em>&lt;GS5 METADATA:</em> Risk assessment indicates that mining equipment can be used as crude rail guns. GS5 is now under military alert. GS5 auto guns and kinetic missiles acquired targets. Armed Shuttles placed in launch bays for rapid launch. Sending general warning to all ships around GS5 to break orbit and maintain distance of more than 500 kilometers.&gt;</p>
+<p><em>Malik Hartjen:</em> Too little, too late, Zemke! You could have done this a week ago, not with a knife under your throat!</p>
+<p><em>&lt;GS5 METADATA:</em> Priority Notice - All miner representatives in GS5 Conference hall received encrypted communication from unknown external source. Partial visual reconstruction from PDA screens in visual range of cameras : “… DO NOT DIE …DAY. WE’LL GET K-…. GO BACK TO MINING… “&gt;</p>
+<p><em>Malik Hartjen:</em> I misspoke. It’s better to take this one step at a time. We will take up your offer, but that doesn’t mean that we trust you. Miners, we are leaving. All ships, stand down and prepare for departure. Captain, I hope you will not allow K-Z to shoot us on departure.</p>
+<p><strong>Transcript End.</strong></p>
+<h1><a class="header" href="#chapter-11---articles-of-incorporation" id="chapter-11---articles-of-incorporation">Chapter 11 - Articles of Incorporation</a></h1>
+<p><strong>Communication Transcript:</strong> Node KZ-6857</p>
+<p><strong>Message Transport:</strong> Directed multi node exchange. Low bandwidth.</p>
+<p><strong>Participating Nodes:</strong> Node KZ-6857, Mining Factory 37-Node1,  Mining Factory 37-ConferenceRoom</p>
+<p><strong>Crypto mode:</strong> Encrypted-in-transit.</p>
+<p><strong>Transcript start:</strong></p>
+<p><em>Mining Factory 37-1:</em> Imani, we are in the middle of docking an asteroid with the factory. If you don’t have any real results a lot of people in the factory will be angry for pausing a very sensitive maneuver.</p>
+<p><em>Node KZ-6857:</em> Cut the drama Mr. Hartjen. Your factory has been in matched orbits with that asteroid for the past Earth Month and your computers don’t have any maneuvering burns in the flight plan. I know you didn’t hire a military level navigator from GS5 to do a manual dock. Infact, I think you were happy not to suffocated in the conference hall of GS5 while your fleet was being cut down by K-Z kinetic missiles. Should we continue with the briefing?</p>
+<p><em>Mining Factory 37-1:</em> Watch your mouth girl! You were hired because you come from a mining family and I thought you could be trusted…</p>
+<p><em>&lt;KZ-6857 METADATA:</em> Mining Factory 37-Node1 connection forcibly terminated&gt;</p>
+<p><em>Node KZ-6857:</em> It seems that Mr. Hartjen is more interested in shows of force than he is in listening. Madam Veronika, I trust you are still in the Factory Conference Room and I can proceed with my report?</p>
+<p><em>Mining Factory 37-ConferenceRoom:</em> Yes Imani - proceed. Malik will join us in the conference room to offset the unfortunate -  and I trust temporary - failure of his cabin node.</p>
+<p><em>Node KZ-6857:</em> Excellent. The Wreckage Guild reached out to me via my family to help you with the hack of the rUn crypto wallets and find the culprits. I stumbled on several unexpected challenges so this effort took me longer than expected. Please bear with me, it becomes quite interesting.</p>
+<p>First things first - I found the missing rUn credits - ALL OF THEM. The funds are placed in a corporate crypto wallet of a newly incorporated company called Somu Unlimited. The company has no history and the registering entity metadata is empty. The shareholders consist of every single mining crew out there, in percentage appropriate to the stolen funds from their crypto wallets. The names listed on the management board are the Mining Guild Chiefs and all the bosses of the free agents. Somu Unlimited has already requested advanced precision manufacturing equipment from the GS blueprint libraries, logged a plan for the creation of a planetoid based factory and has even started offering a product line of advanced communication equipment on the trading boards. If it wasn’t for the hack itself, all these moves would have been the best collaborative effort of the miners in the entire history of My Way system. The articles of incorporation contain a statement that the funds were pooled by the Miners to unite in a common company for improving profit margins.</p>
+<p>I am uploading the articles of incorporation of Somu to all Guilds and independent crews as we speak.</p>
+<p>Now for the more complicated part of the briefing: There is no trace of whoever did all this - the hack, the incorporation, the business model. No data library, log repository nor satellite logs of K-Z, Riordan, GS ships or anyone else has any record of the fund transfers nor traffic activity that correlates to the hack nor the incorporation. It’s impossible to scrub all the data records so perfectly - even if it was, the absence of data would also be a trace to follow. The hack originated in the Debris Cloud mining ships, and it stopped there. I can’t pinpoint the exact ship of origin. The logs of all mining ships record fragments of the hack activity at nearly the same times, with delays too short to explain skipping across ship computers via data links. I can only assume that a much more skilled hacker has created a distributed program that executed in sync using the mining ships computers as a botnet. Once the program completed it deleted itself.</p>
+<p>For any external forensic auditors from the GS ships, K-Z or anyone else it would look like the miners have started a collaborative company by using a bit of strong-arming. We don’t know who the benefactor is - we may never know.</p>
+<p>I have one last piece of news for you Madam Veronika - The articles of incorporation contain a heavily encrypted message addressed to the Guild Chiefs. The metadata of the message states that the decryption key is deposited with the Matriarchs with a password “yourselectionsarecorrect”. From what I gather, the key is stored somewhere on each of the Matriarch’s PDA. You need to search your PDA for the key and use it to decrypt the message.</p>
+<p><strong>Transcript end.</strong></p>
+<p><strong>Challenge:</strong> The link below contains the image of the Matriarch PDA filesystem. You need to find the file key and use it to decrypt the message. First solution gets a $15 US Amazon gift card and bragging rights. Everyone else gets just the bragging rights.</p>
+<p>URL to file: https://bit.ly/2D6F9Ww</p>
+<p>Submit the solution <strong><a href="https://cliffnest.shortinfosec.net/contact">here</a>.</strong></p>
+<pre><code>—–BEGIN PGP MESSAGE—–
+hQIMA5faTz2u2pCwARAAmHt859dxrRW6VKi7PZN8hvE9R/tcFWNkR+yYDuMnwKJP
+wBOypZkz1hXNyC3oiQQGB3OdMjl3eSh/7mcQRmHZMHXoA/B3OoJiG8NeNj5b8JkH
+vMml2dB+EY+WSOxOK/c2ieUX2fsdVKxoaUxqd/suIzj6A6HqNlwwTJq5fXoEVJT5
+gvjjNOcLt3rGUvsPbi3QwpKSDhYivWSZ4mNvhI/gwt8resig1Zgdr4BTmqHmt4zZ
+h/qxCvodOIrmaL3Dzmmj9lGMA7u/g3xlLnjp+gDyZGoKEBIX+EFQAjpa+QsRKpU3
+CZ/hASJj5IE7B/qmns+VfEzc9vjoyZwtIYgaFwPJ71iHnbB2aKgiwLxFBr3hYWd+
+b9mrFc+ZipR/ImU+Kf6A4Znog6KPQFqiFuDTCXbgnXQtcIH1WGhEGTm2r8o/lmG/
+GbVeYvgvgDnWr6JwFo9+aWzuJMevcF9R7bErhG+B3+AqKc3XNC71kZheYmKM/oaG
+5EuMIqyPyu9LmVmfMYGVAwSRtBEHXyyRLRrsdl0/fMi2pH2/CW8qlTZzo2AQ4dkd
+V7fxcfsLGqG+c+emKNs+EapcK+5vkRrFtAMcBCzobre/9FiGq9xTPo+TyZ2kZ7zv
+S8/64dC5++n37Kn/GBY5ZmI5YjaW3PNbkAYJ/lKbsYrbsLuPER4lQCqgrdVvQUfS
+6gFSFmTQ+yiAK+PaRtkE29STxxcazwzhQgjBV4uXOuXgNxT/CfRGMK9BFMBEvv0s
+KWw9Gujwgln5zkXJ9l1/VXrQPLVKVquxCbArJBGFe0vopPBf47oWYYCbSnIYOf4u
+CUAOoeFxEEFY1W4KnPK+SkrvJ7IY3i4HIMiXcBq6i5IQCtExnZQBe85UKkYrePib
+GvQkJYOYy17S14ipUP2JL1jhda9DkEpyZfNaKZX0ONwOZwmllOcEuJ+xaaSjgRoL
+YFvDe0mWyFiSXYaFPGRO4f5jTHnUctXDof6Jk2Flg8RTrA4jnGMxKsulLaTtvtgW
+EXsw0np6Xa7+X8os6TGSjEV2+BGScWoEUeaDcmw8PGYP1NeKid90ARiRr7pdVMnP
+9ZGlgFBkVB3X2k/rHGJojInLn8MVH/FO92UZMG3vNsKDrjB5FrYwO53feneHuzfu
+lbO5c12afG37UdZivza3pL9SDMYOSWIPPvCvPdq5Mnjv/vgemvHwK6umg/MZxl5o
+tNOpiwi1y2EWdyJO4dOAhB3/gFLpunOCOPlAyKgUOsaDMPyNDauDpuKk2RX7kOqF
+iBzssNmB5c4b+GYGIl+uyQVosMSGhAwGhC0cb5d8Q44rx6nYLPvaE+oMf5tXs3nl
+61y/iiykxJvX26faROXJfGfV/SK3x3cS5UInZi4B7bEjH2bM6EgCdvGgzwdSRL9a
+hC4sn+ELBGVOt80B6wNNgKcAsr7xJrqdEBS0MXARs++vzvTqMZq0e8GqJkvkJHfw
+ltbfaw1yBjB2dp1ljlJP3vGGo2J5RZ0FXjSdZ5z5l4cbY34Ve1asyZFtV0XxqBno
+Z9dxaR2Guafj0KOvDrN+erRLf9cJX/caTT44w/WlnzWy/hTdysDrIYqkgip0p5xq
+GbsucwY9XR04ieQeqPLXHTlRtlnOeH9cqHNbJtDV+VYHUiPndoIriKZQygIIuxrx
+ahCzDQOaY4oIFoF0LspyazszscQLYRf8EvVHbKkOdxtvEBD8B9eM1X8qndm+wjwo
+RPWuIirmZ3C457B0vv0Da06ISryLaeEYBVa0sia2sdSK0QS/uhVG55qlTaesz1z5
+8sHUPP5FdXL/qUR0hbdMR9rBp04/bJh/VYJ9SEPip9Q/uG2d2Y9kCYVoHyqhZayf
+/VDMoTQJA+BWID3hM8j3UIBwWfaEkBxV80dHqiPQ3BpC9kLVrLRLIoBhSidbYn6S
+e1BgTjUfL/uSK929GmixpBiU4vdZv63IR3N4CmciJSg1vdBLHFDaTOiWreNfGsLS
+sZcesWWTUr+Go46YyXJ+GFiXrz1JYn2C/BWyVRRBIvdH9tNK55nmJ0zLd1GlhB9X
+ClDyiohi3/+sM0m1a8tIjM7AMT2mFgXv+IFR929w+v1uvuRc2djQV0XmP0m0Vzjt
+OThQ3DLjRnHcllMcRIUJ4iMdpYgqSScL4EpWsWqbjwxESQ37n+a/e+7LfJGZ8OPl
+birNf0UjtVVixSZOlxqSDD93boNrJq05ni3O5rC2O9un5j3Mt5pooTEhq9NhfUUZ
+Lq3xmM9IfIzjuxNEWr4Q0RS7RYIYjz8Y/E8s1GNtCXen6+JB7aAbkD3Eh0V2aQeC
+UJtXJbUMAbDXJlDUvHND+R5dgn2wQr3DvHfTyJBG/aEO/8pDz08NDfdQsOOuF2tq
+v7s9srK6UrsSXU03ZmXoHpVEjW4=
+=WFHV
+—–END PGP MESSAGE—–
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

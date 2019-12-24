@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Risk Assessment - The Cliff Nest</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="cover.html"><strong aria-hidden="true">1.</strong> Cover</a></li><li class="expanded "><a href="preface.html"><strong aria-hidden="true">2.</strong> Preface</a></li><li class="expanded "><a href="chapter_1.html"><strong aria-hidden="true">3.</strong> The Letter</a></li><li class="expanded "><a href="chapter_2.html"><strong aria-hidden="true">4.</strong> Chance Meeting</a></li><li class="expanded "><a href="chapter_3.html"><strong aria-hidden="true">5.</strong> Deceleration Burn</a></li><li class="expanded "><a href="chapter_4.html"><strong aria-hidden="true">6.</strong> General Alert</a></li><li class="expanded "><a href="chapter_5.html"><strong aria-hidden="true">7.</strong> The Blind Snail Message</a></li><li class="expanded "><a href="chapter_6.html"><strong aria-hidden="true">8.</strong> Key Performance Indicators</a></li><li class="expanded "><a href="chapter_7.html"><strong aria-hidden="true">9.</strong> Antimalware</a></li><li class="expanded "><a href="chapter_8.html"><strong aria-hidden="true">10.</strong> The Learners Club</a></li><li class="expanded "><a href="chapter_9.html"><strong aria-hidden="true">11.</strong> History Lesson</a></li><li class="expanded "><a href="chapter_10.html" class="active"><strong aria-hidden="true">12.</strong> Risk Assessment</a></li><li class="expanded "><a href="chapter_11.html"><strong aria-hidden="true">13.</strong> Articles of Incorporation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Dark</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Cliff Nest</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#chapter-10---risk-assessment" id="chapter-10---risk-assessment">Chapter 10 - Risk Assessment</a></h1>
+<p><strong>Log Transcript:</strong> Generation Ship GS5; General logs.</p>
+<p><strong>Log creator:</strong> Conference Hall recording. Multiple persons in log, recording for public re-sending. Additional notes in metadata.</p>
+<p><strong>Crypto mode:</strong> Cleartext.</p>
+<p><strong>Transcript Start:</strong></p>
+<p><em>Marama Nishimura:</em> Welcome all to GS5. It’s a very rare occasion that all Debris Cloud mining communities send a representative for an in-person discussion. For the younger representatives, a round of formal introduction - I am captain Marama Nishimura. We have the miners from all product guilds in the debris cloud as well as the free agent groups.</p>
+<p>The topic is two-fold, the emptying of the rUn crypto wallets of many of you as well as the comm link prices to trading boards. Fifteen Earth Days ago a massive crypto wallet hack happened across the Debris Cloud. Multiple guilds, free agent groups and independent ships were drained of rUn funds, causing very serious issues in paying for supplies, repair, fuel and everything else that the mining groups cannot manufacture themselves. The investigation is ongoing with full cooperation of all parties, but in the meantime GS5 and the habitat captains have agreed to defer payment for resources for the impacted miners. The debt is recorded by newly created loan register distributed to all GS ships and habitats.</p>
+<p>But the resource trading boards where the miners sell the mined resources are under communication jurisdiction of K-Z. K-Z has not agreed to enter into the loan register. Hence, all payments for access of the boards are still outstanding. K-Z has started blocking access as unpaid amounts increase, causing a deadlock situation - the miners cannot pay for a link to a trading board to sell the resources so they can pay for the link.</p>
+<p>This meeting is recorded and will be transmitted by the GS to all public Data Libraries for reference.</p>
+<p>The first issue will be addressed by myself as the overseer of police influence of GS5. The second will be addressed directly by Wienczyslaw Zemke, the CEO of Kerata Zemke - who has agreed to fly to GS5.</p>
+<p><em>Malik Hartjen:</em> Great speech captain. I am Malik Hartjen of the Wreckage Guild. We all came here to stop with the bullshit and arrest the K-Z oligarch. It’s clear that K-Z hacked our crypto wallets and now continues to bleed us dry. I am uploading the consent naming me the speaker for all free agents as well as more than 80 percent of all guilds. Mr. Wienczyslaw, welcome to the Debris Cloud prison!</p>
+<p><em>&lt;GS5 METADATA:</em> unintelligible noise, multiple sources, loudness above 90 dB&gt;</p>
+<p>Marama Nishimura: Mr Hartjen, as long as I am captain of this GS law enforcement is a role of our teams. You can apply for a legal opinion, but there will be no arrest by miners. Stand back and let’s hear each other out!</p>
+<p><em>&lt;GS5 METADATA:</em> ALERT - Receiving general alert from Captain Nishimura  PDA. Captain and GS in danger. Resending general alert to all armed units on the GS and all other GS ships. Prioritizing armed shuttles for launch. Powering up asteroid defense auto guns. Conference hall section lockdown. Oxygen depletion protocols for conference hall on standby.&gt;</p>
+<p><em>&lt;GS5 METADATA:</em> Incoming transmission to all PDA from K-Z data library. Authorized and paid for by Wienczyslaw Zemke: Captain, Mr Hartjen. Let me speak, then you both can decide on arrests!&gt;</p>
+<p><em>&lt;GS5 METADATA:</em> noise loudness reduced to 60 dB. General alert still in force. Risk assessment remains high due to presence of the captain within the sphere of potential conflict.&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> I have four arguments to counter the argument that K-Z is at fault: One - Yes, we supply your comm links and we charge for it. But the attack wasn’t performed via our links - we had our SI account for every single bit in the comms to and from the Debris Cloud and the outer orbit GS in the last Earth Month. No unaccounted data transfers. If the GS captains agree to dedicate SI resources for independent review, the raw data is already uploaded to all GS Data Libraries.</p>
+<p><em>&lt;GS5 METADATA:</em> external sensors detect six armed shuttles with Kerata Zemke beacons on a high G deceleration approach to GS5&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Two - From a purely business perspective, stealing from you doesn’t make sense. If we cause our clients to become insolvent en masse, our entire business model fails.</p>
+<p>There are more than seventy laser comm satellites, twenty Data Libraries, four manned support stations and numerous maintenance vehicles in outer orbits, placed there for the Debris Cloud Miners. We don’t have any other customers to serve here. We prosper only as long as you prosper.</p>
+<p><em>&lt;GS5 METADATA:</em> Tactical positioning of K-Z shuttles on approach indicate shooting solutions towards the mining shuttle fleet. Alerting all GS ships. &gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Three - Based on our comm traffic analysis the hack has initiated within the local comm cloud of the mining vessels and the GS. There is a high risk that the malware is still active which is the main reason that we didn’t join the loan register which would have opened our platforms to new and unvetted code and spreading of the malware. We have been working on a solution which will enable trading while maintain separation of unvetted code. That solution was finalized two days ago and fifteen K-Z comm satellites and two Data Libraries are in reconfiguration as we speak to facilitate a demilitarized trading board network. Reach out to your ships to confirm the new setup.</p>
+<p><em>&lt;GS5 METADATA:</em> Mining fleet maneuvering to place GS5 between the K-Z ships and them. Some mining rigs have powered up long range mining equipment. Risk assessment in progress.&gt;</p>
+<p><em>Wienczyslaw Zemke:</em> Four - the blocked users were blocked by accounting automation. We are re-enabling access for them and will not block further. Instead all outstanding charges will be published on the standard and demilitarized Data Libraries for transparency since we are not joining the loan register.</p>
+<p>I hope you will accept and independently confirm our arguments. We have a team of engineers on GS5 that will work with you in the following weeks to get you back on your feet.</p>
+<p><em>&lt;GS5 METADATA:</em> Risk assessment indicates that mining equipment can be used as crude rail guns. GS5 is now under military alert. GS5 auto guns and kinetic missiles acquired targets. Armed Shuttles placed in launch bays for rapid launch. Sending general warning to all ships around GS5 to break orbit and maintain distance of more than 500 kilometers.&gt;</p>
+<p><em>Malik Hartjen:</em> Too little, too late, Zemke! You could have done this a week ago, not with a knife under your throat!</p>
+<p><em>&lt;GS5 METADATA:</em> Priority Notice - All miner representatives in GS5 Conference hall received encrypted communication from unknown external source. Partial visual reconstruction from PDA screens in visual range of cameras : “… DO NOT DIE …DAY. WE’LL GET K-…. GO BACK TO MINING… “&gt;</p>
+<p><em>Malik Hartjen:</em> I misspoke. It’s better to take this one step at a time. We will take up your offer, but that doesn’t mean that we trust you. Miners, we are leaving. All ships, stand down and prepare for departure. Captain, I hope you will not allow K-Z to shoot us on departure.</p>
+<p><strong>Transcript End.</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_9.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_11.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="chapter_9.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="chapter_11.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
